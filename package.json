@@ -1,0 +1,41 @@
+{
+  "name": "des_7",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.6",
+    "add-to-calendar-button-react": "^2.1.1",
+    "animate.css": "^4.1.1",
+    "aos": "^3.0.0-beta.6",
+    "axios": "^1.3.2",
+    "baguettebox.js": "^1.11.1",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "framer-motion": "^10.12.12",
+    "lightgallery": "^2.7.1",
+    "moment": "^2.29.4",
+    "mongoose": "^6.9.1",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.1",
+    "react-icons": "^4.7.1",
+    "react-responsive-carousel": "^3.2.23",
+    "react-scroll": "^1.8.9",
+    "react-slick": "^0.29.0",
+    "sharp": "^0.31.3",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.7.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2"
+  }
+}
