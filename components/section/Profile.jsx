@@ -52,7 +52,7 @@ const Profile = () => {
                   data-aos-duration="1000"
                   className="titles text-2xl text-[#6C5B7B] capitalize "
                 >
-                  Rio
+                  Satrio Kusuma
                 </h2>
                 <Link
                   href="https://instagram.com/rahmadi.irawansyah"
@@ -138,7 +138,7 @@ const Profile = () => {
                   data-aos-duration="1000"
                   className="titles text-2xl text-[#6C5B7B] capitalize "
                 >
-                  Nisa
+                  Nisa Ayu Hartati
                 </h2>
                 <Link
                   href="https://instagram.com/dindanovitas"
