@@ -40,7 +40,7 @@ const Gallery = () => {
           <div className="absolute z-20 -bottom-4 left-0 right-0 w-full">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
-                fill="#F5F5F5"
+                fill="#FBFBFB"
                 fill-opacity="1"
                 d="M0,96L120,122.7C240,149,480,203,720,229.3C960,256,1200,256,1320,256L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
               ></path>
