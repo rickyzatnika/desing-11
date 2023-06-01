@@ -1,14 +1,11 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { ImProfile } from "react-icons/im";
 import { animateScroll as scroll } from "react-scroll";
-import {
-  FcAbout,
-  FcBusinessContact,
-  FcDisplay,
-  FcStackOfPhotos,
-  FcSms,
-} from "react-icons/fc";
+import { BiHomeHeart } from "react-icons/bi";
+import { AiOutlineComment } from "react-icons/ai";
+import { BsCalendarDate } from "react-icons/bs";
+import { ImProfile } from "react-icons/im";
+import { RiGalleryLine } from "react-icons/ri";
 
 const NavMobile = () => {
   const [activeSection, setActiveSection] = useState("header");
@@ -58,21 +55,19 @@ const NavMobile = () => {
     <nav
       className={
         activeSection && document.querySelector(`#${activeSection}`)
-          ? "w-full rounded-full px-2 scale-100 flex lg:hidden fixed bottom-3 z-[9999] transition-all duration-300 ease-linear"
+          ? "w-full px-2 scale-100 flex lg:hidden fixed bottom-3 z-40 transition-all duration-300 ease-linear"
           : "scale-0 transition-all duration-300 ease-linear"
       }
     >
-      <ul className="w-full antialiased shadow-inner shadow-zinc-500/40 bg-[#FBFBFB] flex items-center justify-around rounded-full h-full py-2  px-6">
+      <ul className="w-full  bg-zinc-50/70  shadow-md shadow-zinc-600/40 backdrop-blur flex items-center justify-around rounded-full h-full py-2  px-6">
         <li
           className={`relative group flex  flex-col-reverse items-center justify-center ${
-            activeSection === "header" ? "text-zinc-800/90" : ""
+            activeSection === "header" ? "text-[#3B302F]" : ""
           }`}
         >
           <span
             className={
-              activeSection === "header"
-                ? " text-xs"
-                : "hidden opacity-0 left-0 absolute"
+              activeSection === "header" ? " text-xs" : "hidden left-0 absolute"
             }
           >
             Invitation
@@ -82,19 +77,19 @@ const NavMobile = () => {
             className="nav-link"
             onClick={(event) => handleClick(event, "header")}
           >
-            <FcAbout size={28} />
+            <BiHomeHeart size={28} className="text-[#3B302F]" />
           </Link>
         </li>
         <li
           className={`relative group flex  flex-col-reverse items-center justify-center ${
-            activeSection === "profile" ? "text-zinc-800/90" : ""
+            activeSection === "profile" ? "text-[#3B302F]" : ""
           }`}
         >
           <span
             className={
               activeSection === "profile"
                 ? " text-xs   "
-                : "hidden opacity-0 left-0 absolute   "
+                : "hidden  left-0 absolute   "
             }
           >
             Profile
@@ -104,19 +99,19 @@ const NavMobile = () => {
             className="nav-link"
             onClick={(event) => handleClick(event, "profile")}
           >
-            <FcBusinessContact size={28} />
+            <ImProfile size={28} className="text-[#3B302F]" />
           </Link>
         </li>
         <li
           className={`relative group flex flex-col-reverse items-center justify-center ${
-            activeSection === "event" ? "text-zinc-800/90" : ""
+            activeSection === "event" ? "text-[#3B302F]" : ""
           }`}
         >
           <span
             className={
               activeSection === "event"
                 ? " text-xs    "
-                : "hidden opacity-0 left-0 absolute  "
+                : "hidden left-0 absolute  "
             }
           >
             Event
@@ -126,19 +121,19 @@ const NavMobile = () => {
             className="nav-link"
             onClick={(event) => handleClick(event, "event")}
           >
-            <FcDisplay size={28} />
+            <BsCalendarDate size={28} className="text-[#3B302F]" />
           </Link>
         </li>
         <li
           className={`relative group flex  flex-col-reverse items-center justify-center ${
-            activeSection === "gallery" ? "text-zinc-800/90" : ""
+            activeSection === "gallery" ? "text-[#3B302F]" : ""
           }`}
         >
           <span
             className={
               activeSection === "gallery"
                 ? " text-xs"
-                : "hidden opacity-0 left-0 absolute"
+                : "hidden  left-0 absolute"
             }
           >
             Gallery
@@ -148,19 +143,17 @@ const NavMobile = () => {
             className="nav-link"
             onClick={(event) => handleClick(event, "gallery")}
           >
-            <FcStackOfPhotos size={28} />
+            <RiGalleryLine size={28} className="text-[#3B302F]" />
           </Link>
         </li>
         <li
           className={`relative group flex  flex-col-reverse items-center justify-center ${
-            activeSection === "wish" ? "text-zinc-800/90" : ""
+            activeSection === "wish" ? "text-[#3B302F]" : ""
           }`}
         >
           <span
             className={
-              activeSection === "wish"
-                ? " text-xs"
-                : "hidden opacity-0 left-0 absolute"
+              activeSection === "wish" ? " text-xs" : "hidden  left-0 absolute"
             }
           >
             Wish
@@ -170,7 +163,7 @@ const NavMobile = () => {
             className="nav-link"
             onClick={(event) => handleClick(event, "wish")}
           >
-            <FcSms size={28} />
+            <AiOutlineComment size={28} className="text-[#3B302F]" />
           </Link>
         </li>
       </ul>

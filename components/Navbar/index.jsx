@@ -1,14 +1,12 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
-import { motion } from "framer-motion";
-import {
-  FcAbout,
-  FcBusinessContact,
-  FcDisplay,
-  FcStackOfPhotos,
-  FcSms,
-} from "react-icons/fc";
+
+import { BiHomeHeart } from "react-icons/bi";
+import { AiOutlineComment } from "react-icons/ai";
+import { BsCalendarDate } from "react-icons/bs";
+import { ImProfile } from "react-icons/im";
+import { GrGallery } from "react-icons/gr";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("header");
@@ -58,84 +56,75 @@ const Navbar = () => {
     <nav
       className={
         activeSection && document.querySelector(`#${activeSection}`)
-          ? "w-fit opacity-100  scale-100 flex flex-col fixed  right-96 top-64  z-50  md:right-[420px] lg:right-[550px]  transition-all duration-300 ease-linear"
-          : "scale-0 opacity-0 transition-all duration-300 ease-linear"
+          ? "w-fit scale-100 flex flex-col fixed top-90 right-96 z-50 sm:right-[450px] lg:right-[550px]  transition-all duration-300 ease-linear"
+          : "scale-0 transition-all duration-300 ease-linear"
       }
     >
-      <ul className="w-full  bg-[#FDFDFD] shadow-inner shadow-black/30 backdrop-blur flex flex-col gap-5  justify-center rounded-full h-full py-10  px-2">
+      <ul className="w-full shadow-md shadow-[#3B302F]/50 bg-[#f3f1ed] backdrop-blur flex flex-col gap-5  justify-center rounded-full h-full py-10  px-2">
         <li
           className={`relative group flex items-center justify-center ${
-            activeSection === "header" ? "text-zinc-800/90" : ""
+            activeSection === "header" ? "text-[#3B302F]" : ""
           }`}
         >
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
+          <span
             className={
               activeSection === "header"
-                ? "block left-6 text-xs absolute  bg-zinc-50 text-zinc-400/80 p-1 rounded-full"
+                ? "block left-6 text-sm absolute bg-zinc-100/80 px-2 rounded-full"
                 : "hidden opacity-0 left-0 absolute bg-zinc-200/80 px-2 rounded-full "
             }
           >
             Invitation
-          </motion.span>
+          </span>
           <Link
             href="#header"
             className="nav-link"
             onClick={(event) => handleClick(event, "header")}
           >
-            <FcAbout size={20} />{" "}
+            <BiHomeHeart size={20} className="text-[#3B302F]" />{" "}
           </Link>
         </li>
         <li
           className={`relative group flex items-center justify-center ${
-            activeSection === "profile" ? "text-zinc-800/90" : ""
+            activeSection === "profile" ? "text-[#3B302F]" : ""
           }`}
         >
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
+          <span
             className={
               activeSection === "profile"
-                ? "block left-6 text-xs absolute bg-zinc-50 text-zinc-400/80 p-1  rounded-full"
+                ? "block left-6 text-sm absolute bg-zinc-100/80 px-2 rounded-full"
                 : "hidden opacity-0 left-0 absolute bg-zinc-200/80 px-2 rounded-full "
             }
           >
             Profile
-          </motion.span>
+          </span>
           <Link
             href="#profile"
             className="nav-link"
             onClick={(event) => handleClick(event, "profile")}
           >
-            <FcBusinessContact size={20} />
+            <ImProfile size={20} className="text-[#3B302F]" />
           </Link>
         </li>
         <li
           className={`relative group flex items-center justify-center ${
-            activeSection === "event" ? "text-zinc-800/90" : ""
+            activeSection === "event" ? "text-[#3B302F]" : ""
           }`}
         >
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
+          <span
             className={
               activeSection === "event"
-                ? "block left-6 text-xs absolute bg-zinc-50 text-zinc-400/80 p-1  rounded-full"
+                ? "block  left-6 text-sm absolute bg-zinc-100/80 px-2 rounded-full"
                 : "hidden  opacity-0 left-0 absolute bg-zinc-200/80 px-2 rounded-full "
             }
           >
             Event
-          </motion.span>
+          </span>
           <Link
             href="#event"
             className="nav-link"
             onClick={(event) => handleClick(event, "event")}
           >
-            <FcDisplay size={20} />
+            <BsCalendarDate size={20} className="text-[#3B302F]" />
           </Link>
         </li>
         <li
@@ -143,50 +132,44 @@ const Navbar = () => {
             activeSection === "gallery" ? "text-zinc-800/90" : ""
           }`}
         >
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
+          <span
             className={
               activeSection === "gallery"
-                ? "block left-6 text-xs absolute bg-zinc-50 text-zinc-400/80 p-1  rounded-full"
+                ? "block  left-6 text-sm absolute bg-zinc-100/80 px-2 rounded-full"
                 : "hidden  opacity-0 left-0 absolute bg-zinc-200/80 px-2 rounded-full "
             }
           >
             Gallery
-          </motion.span>
+          </span>
           <Link
             href="#gallery"
             className="nav-link"
             onClick={(event) => handleClick(event, "gallery")}
           >
-            <FcStackOfPhotos size={20} />
+            <GrGallery size={20} className="text-[#3B302F]" />
           </Link>
         </li>
 
         <li
           className={`relative group flex items-center justify-center ${
-            activeSection === "wish" ? "text-zinc-800/90" : ""
+            activeSection === "wish" ? "text-[#3B302F]" : ""
           }`}
         >
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
+          <span
             className={
               activeSection === "wish"
-                ? "block left-6 text-xs absolute bg-zinc-50 text-zinc-400/80 p-1  rounded-full"
+                ? "block  left-6 text-sm absolute bg-zinc-100/80 px-2 rounded-full"
                 : "hidden  opacity-0 left-0 absolute bg-zinc-200/80 px-2 rounded-full "
             }
           >
             Wish
-          </motion.span>
+          </span>
           <Link
             href="#wish"
             className="nav-link"
             onClick={(event) => handleClick(event, "wish")}
           >
-            <FcSms size={20} />
+            <AiOutlineComment size={20} className="text-[#3B302F]" />
           </Link>
         </li>
       </ul>
